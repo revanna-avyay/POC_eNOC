@@ -13,6 +13,11 @@ import { CommonCardComponent } from './common/common-card/common-card.component'
 import { CommonModule } from '@angular/common';
 import { TableService } from './services/table.service';
 import { CommonTableComponent } from './common/table/common-table/common-table.component';
+import { InformationLinksComponent } from './components/information-links/information-links.component';
+import { PdfComponent } from './components/pdf/pdf.component';
+import { StatusIndicatorComponent } from './components/status-indicator/status-indicator.component';
+import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
+import { ApplicationStatusComponent } from './components/application-status/application-status.component';
 
 const data = [
   {
@@ -44,7 +49,8 @@ const data = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FileUploadComponent, CommonTableComponent, CommonModule, CommonCardComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule, LangTranslateComponent, CommonAlertComponent],
+  imports: [FileUploadComponent, CommonTableComponent, CommonModule, CommonCardComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
+    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, CommonAlertComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
