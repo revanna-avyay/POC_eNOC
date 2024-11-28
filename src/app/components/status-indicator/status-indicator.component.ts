@@ -20,7 +20,7 @@ export class StatusIndicatorComponent {
     { step: 7, value: 100 },
   ];
 
-  currentStep = 7;
+  currentStep = 3;
 
 
   getProgressBarColor(step: number): string {
