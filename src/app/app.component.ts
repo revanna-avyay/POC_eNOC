@@ -7,7 +7,6 @@ import { fileFormats } from './data/states';
 import { NotificationComponent } from './components/notification/notification.component';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { LangTranslateComponent } from "./components/lang-translate/lang-translate.component";
-import { DatabaseService } from './sql-database.service';
 import { CommonAlertComponent } from './common/common-alert/common-alert.component';
 import { CommonCardComponent } from './common/common-card/common-card.component';
 import { CommonModule } from '@angular/common';
@@ -52,7 +51,7 @@ const data = [
   standalone: true,
   imports: [FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
     LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule],
-  providers: [DatabaseService, TableService],
+  providers: [TableService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -64,8 +63,6 @@ export class AppComponent implements OnInit {
   customTableData: [] = []
 
   custTableData = inject(TableService)
-
-  // constructor(private dbService: DatabaseService) { }
 
   onFilesChanged(files: File[]): void {
     console.log('Uploaded files:', files);
@@ -82,16 +79,4 @@ export class AppComponent implements OnInit {
       console.log(res)
     })
   }
-
-
-  // fetchData() {
-  //   const query = 'SELECT * FROM custinfo;';
-  //   this.dbService.executeQuery(query, (err, results) => {
-  //     if (err) {
-  //       console.error('Query error:', err);
-  //     } else {
-  //       console.log('Query results:', results);
-  //     }
-  //   });
-  // }
 }
