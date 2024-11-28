@@ -99,7 +99,12 @@
           <app-application-status />
         </ng-template>
       </ng-container>
-        
+      <ng-container ngbNavItem="meetings">
+        <button ngbNavLink> Meetings </button>
+        <ng-template ngbNavContent>
+          <app-meetings />
+        </ng-template>
+      </ng-container>
     </div>
 
     <div [ngbNavOutlet]="nav" class="ms-4"></div>

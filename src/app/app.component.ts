@@ -18,6 +18,7 @@ import { PdfComponent } from './components/pdf/pdf.component';
 import { StatusIndicatorComponent } from './components/status-indicator/status-indicator.component';
 import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from './components/application-status/application-status.component';
+import { MeetingsComponent } from './components/meetings/meetings.component';
 
 const data = [
   {
@@ -49,8 +50,9 @@ const data = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FileUploadComponent, CommonTableComponent, CommonModule, CommonCardComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
-    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, CommonAlertComponent],
+  imports: [FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
+    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule],
+  providers: [DatabaseService, TableService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
