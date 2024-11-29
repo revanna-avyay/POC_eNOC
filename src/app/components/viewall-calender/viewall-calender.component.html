@@ -1,0 +1,56 @@
+<div class="container theme-showcase">
+  <h5>My Meetings</h5>
+
+    <div class="displayDiv" >
+        <div>
+            <button 
+              *ngFor="let modeOption of ['month','week']"
+              class="monthWeekButtons" 
+              [ngClass]="{ 'activeButton': mode === modeOption, 'nonActiveButton': mode !== modeOption }"
+              (click)="changeMode(modeOption)">
+                {{ modeOption | titlecase }}
+            </button>
+        </div>
+        <div>
+            <img (click)="prev()" src="assets/images/icons/Left.svg" alt="Left arrow" />
+            <span> {{ displayedMonth }} </span>
+            <img (click)="next()" src="assets/images/icons/Right.svg" alt="Right arrow" /> 
+        </div>
+        <div></div>
+  </div>
+
+  <table *ngIf="mode === 'month'" class="table table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let day of daysOfWeek">{{ day }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let week of weeks">
+        <td *ngFor="let day of week" [class.table-primary]="day.toDateString() === selectedDate.toDateString()"
+        [ngClass]="{ 'meetingDay': hasMeetingOnDate(day) }"
+        >
+          {{ day.getDate() }}
+          <!-- <p *ngIf="hasMeetingOnDate(day)">meeting</p> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+   <table *ngIf="mode === 'week'" class="table table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let day of daysOfWeek">{{ day }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td *ngFor="let day of weekDays" [class.table-primary]="day.toDateString() === selectedDate.toDateString()" >
+          <div [ngClass]="{ 'meetingDay': hasMeetingOnDate(day) }" >{{ day.getDate() }}</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

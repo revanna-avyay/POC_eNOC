@@ -1,0 +1,33 @@
+.headerDiv {
+    display: flex;
+}
+
+.announcement {
+   text-decoration: underline;
+   color: rgb(11, 11, 121);
+   font-weight: 500;
+   font-size: 1 rem;
+}
+
+.announcementContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsla(171, 4%, 65%, 0.471);
+    border-radius: 5px;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.announcementContainer:hover{
+    border: 1px solid black;
+}
+
+.badge {
+    background-color: rgb(52, 160, 52);
+    margin-right: 5px;
+}
+
+.statement {
+    text-decoration: underline;
+}

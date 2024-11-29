@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h5 class="modal-title">Announcements</h5>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="close()"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="d-flex mb-3 align-items-center">
+    <button class="btn btn-outline-secondary me-2">
+      <i class="bi bi-calendar"></i> Date filter
+    </button>
+    <input type="text" class="form-control" placeholder="Search Announcement" />
+  </div>
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let announcement of announcements ">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="text-muted">
+          {{ announcement.date | date : "dd/MM/yyyy hh:mm a" }}
+        </span>
+        <span *ngIf="announcement.isNew" class="badge bg-danger text-light"
+          >New</span
+        >
+      </div>
+      <h6 class="mt-2">{{ announcement.title }}</h6>
+      <p class="mb-0 text-muted">{{ announcement.description }}</p>
+    </div>
+  </div>
+</div>

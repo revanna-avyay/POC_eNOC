@@ -1,0 +1,33 @@
+.table-primary {
+    background-color: #d0e8f2;
+}
+
+.displayDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.monthWeekButtons {
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    font-size: small;
+}
+
+.activeButton {
+    background-color: rgba(5, 11, 128, 0.971);
+    color: white;
+}
+
+.nonActiveButton {
+    background-color: rgba(216, 216, 219, 0.971);
+    color: blue;
+    border: none;
+}
+
+.meetingDay {
+    color: green;
+}
+

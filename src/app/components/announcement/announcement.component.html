@@ -1,0 +1,32 @@
+<div class="headerDiv" >
+    <div>
+       <img  alt="car road pic" />
+    </div>
+    <div>
+       <p> Hello! Welcome to </p>
+       <h3> Electronic No Objection Certificate </h3>
+    </div>
+</div>
+
+<p class="announcement" (click)="openModal()"  > Announcements <i class="bi bi-chevron-right" ></i> </p>
+
+<div class="row">
+@for (item of announcements | slice:0:4; track $index) {
+    <div class="col-5" >
+<div class="card announcementContainer" (click)="openModal()" >
+    <div class="card-body">
+      <span class="date"> 12th June </span>   
+      <p class="statement">Revalidation of NOC from 6 Weeks !</p>
+    </div>
+    <div>
+        <span class="badge">New</span>
+        <p><i class="bi bi-chevron-right"></i> </p>
+    </div>
+</div>
+</div>
+}
+</div>
+
+<div>
+    <app-status-inquire />
+</div>

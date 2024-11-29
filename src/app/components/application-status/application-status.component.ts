@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-application-status',
@@ -13,6 +14,11 @@ export class ApplicationStatusComponent implements OnInit {
   tableData: any[] = [];
   tableHead: string[] = [];
   statusOfApplication?: string = ''
+  @Input() closeButton: boolean = false
+
+  constructor(public activeModal: NgbActiveModal ){
+    // this.openModal()
+  }
 
   ngOnInit(): void {
     const data = [
@@ -33,6 +39,14 @@ export class ApplicationStatusComponent implements OnInit {
     );
 
     return data.find((item) => new Date(item.Date).getTime() === latestDate.getTime());
+  }
+
+  // openModal() {
+  //   this.modalService.open(ModalContentComponent);
+  // }
+
+  closeClickHandler(){
+    this.activeModal.close(); 
   }
 
 }

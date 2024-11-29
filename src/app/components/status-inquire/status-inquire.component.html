@@ -1,0 +1,13 @@
+<div>
+  <p class="headerText">NOC Status inquire</p>
+  <input
+    type="text"
+    placeholder="search by NOC/PT Ref.No (E.g. 16020-2001)"
+    [(ngModel)]="nocInput"
+    (ngModelChange)="inputEvent($event)"
+  />
+  <button (click)="openModal()">
+    <img src="assets/images/icons/Right.svg" alt="left arrow" />
+  </button>
+  <p *ngIf="noNOCFound" class="noNOCFound" >No NOC Found for your Entered NOC Number</p>
+</div>

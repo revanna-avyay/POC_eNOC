@@ -1,10 +1,17 @@
-<div class="card">
-    <div class="card-header">
+
+    <div class="modal-header">
         <div class="statusText" >
             <h5>Application Status</h5>
         </div>
+        <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        *ngIf="closeButton"
+        (click)="closeClickHandler()"
+      ></button>
     </div>
-    <div class="card-body">
+    <div class="modal-body">
         <div class="statusDiv">
             <div>
                 <h5>Overall Status</h5>
@@ -32,4 +39,3 @@
             </div>
         </div>
     </div>
-  </div>
