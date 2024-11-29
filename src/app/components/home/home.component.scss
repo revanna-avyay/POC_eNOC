@@ -1,0 +1,100 @@
+// Variables for responsiveness
+$container-margin: 5px;
+$container-margin-sm: 2%;
+
+$responsive-breakpoint: 768px;
+
+.responsive-section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: $container-margin;
+  padding: 10px;
+  box-sizing: border-box;
+  
+  @media (max-width: $responsive-breakpoint) {
+    margin: $container-margin-sm;
+  }
+}
+
+.labels{
+    font-weight: 600;
+}
+.main-box {
+  display: flex;
+  height: 460px; // Adjust container height as needed
+  background-color: #f0f0f0; // Light background for contrast
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  .box {
+    height: 100%; // Full height of the container
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .Details_box {
+    flex: 0 0 60%; // 60% width
+    background-color: #4a90e2; // Primary color
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .welcome_heading{
+        background-color: red;
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: start;
+        max-width: 100%;
+
+        .img_div{
+            padding: 2px;
+            height: 100%;
+        }
+
+        .text_div{
+            .translucent_heading{
+                color: #848FA4;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    .announcement_boxes{
+        background-color: orange;
+        width: 100%;
+        flex-grow: 1;
+        padding: 10px;
+
+    }
+    .NOC_section{
+        background-color: black;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+
+    }
+  }
+
+  .login_box {
+    flex: 1; // Remaining width
+    background-color: #50e3c2; // Secondary color
+  }
+}
+
+.scrollable_section{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 60px;
+    background-color: #4a90e2;
+    padding: 10px;
+}
+
