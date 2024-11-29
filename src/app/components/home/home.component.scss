@@ -1,7 +1,8 @@
+@import '../../../styles.scss';
+
 // Variables for responsiveness
 $container-margin: 5px;
 $container-margin-sm: 2%;
-
 $responsive-breakpoint: 768px;
 
 .responsive-section {
@@ -85,6 +86,7 @@ $responsive-breakpoint: 768px;
   .login_box {
     flex: 1; // Remaining width
     background-color: #50e3c2; // Secondary color
+    // background-color: $secondary-fascinated;
   }
 }
 
