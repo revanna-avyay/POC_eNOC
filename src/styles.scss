@@ -1,11 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-
-//FONT FAMILY
+/* FONT FAMILY */
 @font-face {
     font-family: 'Dubai';
     src: url('../public/assets/fonts/Dubai-Regular.ttf') format('ttf'),
@@ -26,61 +23,63 @@
 //     font-style: normal;
 // }
 
-// Primary Colors:
-$color-primary-red: #e71425;
-$color-primary-blue: #1a278b;
+:root {
+  /* Primary Colors */
+  --color-primary-red: #e71425;
+  --color-primary-blue: #1a278b;
 
-//Secondary Colors:
-$secondary-happy: #fdb62b; // Happy
-$secondary-fascinated: #fd7022; // Fascinated
-$secondary-inspired: #ce19ab; // Inspired
-$secondary-imaginary: #7e38c4; // Imagery
-$secondary-relaxed: #1162dd; // Relaxed
-$secondary-unique: #1bafb7; // Unique
-$secondary-optimistic: #19af58; // Optimistic
-$secondary-grounded: #a1a430; // Grounded
+  /* Secondary Colors */
+  --secondary-happy: #fdb62b; /* Happy */
+  --secondary-fascinated: #fd7022; /* Fascinated */
+  --secondary-inspired: #ce19ab; /* Inspired */
+  --secondary-imaginary: #7e38c4; /* Imagery */
+  --secondary-relaxed: #1162dd; /* Relaxed */
+  --secondary-unique: #1bafb7; /* Unique */
+  --secondary-optimistic: #19af58; /* Optimistic */
+  --secondary-grounded: #a1a430; /* Grounded */
 
-//By Classification:
+  /* By Classification */
 
-//BUS Colors:
-$color-bus-rta: #1c1362;
-$color-bus-urban: #6e328e;
-$color-bus-urban-cbd: #e3b83b;
-$color-bus-feeder: #3d70b5;
-$color-bus-inter-city: #d27827;
-$color-bus-express: #b13592;
+  /* BUS Colors */
+  --color-bus-rta: #1c1362;
+  --color-bus-urban: #6e328e;
+  --color-bus-urban-cbd: #e3b83b;
+  --color-bus-feeder: #3d70b5;
+  --color-bus-inter-city: #d27827;
+  --color-bus-express: #b13592;
 
-$color-bus-night: #1c1760;
-$color-bus-seasonal: #6e328e;
-$color-bus-expo: #784d2b;
-$color-bus-on-demand: #e91d2f;
+  --color-bus-night: #1c1760;
+  --color-bus-seasonal: #6e328e;
+  --color-bus-expo: #784d2b;
+  --color-bus-on-demand: #e91d2f;
 
-//Metro Colors:
-$color-metro-red: #e91d2f;
-$color-metro-green: #0aae53;
-$color-metro-tram: #f47922;
+  /* Metro Colors */
+  --color-metro-red: #e91d2f;
+  --color-metro-green: #0aae53;
+  --color-metro-tram: #f47922;
 
-//Marine Colors:
-$color-marine-night: #00b9f1;
-$color-marine-seasonal: #b0af30;
-$color-marine-expo: #01b5b8;
-$color-marine-on-demand-blue: #2c4280;
-$color-marine-on-demand-darker-blue: #0074bc;
+  /* Marine Colors */
+  --color-marine-night: #00b9f1;
+  --color-marine-seasonal: #b0af30;
+  --color-marine-expo: #01b5b8;
+  --color-marine-on-demand-blue: #2c4280;
+  --color-marine-on-demand-darker-blue: #0074bc;
+}
 
-// Typography mixin
+/* Typography mixin using CSS variables */
 @mixin typography(
     $font-size,
     $line-height,
     $font-weight: normal,
     $font-family: "Dubai"
-
 ) {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $font-weight;
     font-family: $font-family;
 }
-// Headline styles
+
+/* Headline styles */
 h1 {
   @include typography(24px, 28px, 400);
 }
