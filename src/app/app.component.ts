@@ -3,7 +3,7 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
 import { ExpandCollapseComponent } from './components/expand-collapse/expand-collapse.component';
 import { TypeAheadComponent } from './components/type-ahead/type-ahead.component';
 import { SearchComponent } from './components/search/search.component';
-import { fileFormats } from './data/states';
+import { fileFormats, quickLinkCardData } from './data/states';
 import { NotificationComponent } from './components/notification/notification.component';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { LangTranslateComponent } from "./components/lang-translate/lang-translate.component";
@@ -18,6 +18,8 @@ import { PdfComponent } from './components/pdf/pdf.component';
 import { StatusIndicatorComponent } from './components/status-indicator/status-indicator.component';
 import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from './components/application-status/application-status.component';
+import { QuicklinkCardComponent } from './common/quicklink-card/quicklink-card.component';
+import { NotificationCardComponent } from './components/notification-card/notification-card.component';
 
 const data = [
   {
@@ -49,7 +51,7 @@ const data = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FileUploadComponent, CommonTableComponent, CommonModule, CommonCardComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
+  imports: [FileUploadComponent, NotificationCardComponent, QuicklinkCardComponent, CommonTableComponent, CommonModule, CommonCardComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
     LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, CommonAlertComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -60,6 +62,7 @@ export class AppComponent implements OnInit {
   active = "file-upload";
   cardData: any[] = []
   customTableData: [] = []
+  quickLinkCardData: any[] = []
 
   custTableData = inject(TableService)
 
@@ -71,6 +74,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.cardData = data
+    this.quickLinkCardData = quickLinkCardData
     this.getCustomTableData()
   }
 

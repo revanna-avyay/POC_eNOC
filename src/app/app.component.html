@@ -34,11 +34,22 @@
 
         </ng-template>
       </ng-container>
+      <ng-container ngbNavItem="Quick-Link-Card">
+        <button ngbNavLink>Quick Link Card</button>
+        <ng-template ngbNavContent>
+          <div class="row">
+            <div class="col-3 p-2 m-4" *ngFor="let item of quickLinkCardData; let index = index">
+              <app-common-card [cardData]="item"></app-common-card>
+            </div>
+          </div>
+
+        </ng-template>
+      </ng-container>
       <ng-container ngbNavItem="Custom-Table">
         <button ngbNavLink>Custom Table</button>
         <ng-template ngbNavContent>
           <div class="row">
-            <div class="col-3 p-2 m-4">
+            <div class="col p-2 m-4">
               <app-common-table [custData]="customTableData"></app-common-table>
             </div>
           </div>
@@ -49,6 +60,12 @@
         <button ngbNavLink>Accordion</button>
         <ng-template ngbNavContent>
           <app-expand-collapse />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="notification-card">
+        <button ngbNavLink>Notification Card</button>
+        <ng-template ngbNavContent>
+          <app-notification-card />
         </ng-template>
       </ng-container>
       <ng-container ngbNavItem="search">
@@ -99,7 +116,7 @@
           <app-application-status />
         </ng-template>
       </ng-container>
-        
+
     </div>
 
     <div [ngbNavOutlet]="nav" class="ms-4"></div>
