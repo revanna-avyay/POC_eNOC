@@ -7,7 +7,7 @@ import { fileFormats, quickLinkCardData } from './data/states';
 import { NotificationComponent } from './components/notification/notification.component';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { LangTranslateComponent } from "./components/lang-translate/lang-translate.component";
-import { DatabaseService } from './sql-database.service';
+// import { DatabaseService } from './sql-database.service';
 import { CommonAlertComponent } from './common/common-alert/common-alert.component';
 import { CommonCardComponent } from './common/common-card/common-card.component';
 import { CommonModule } from '@angular/common';
@@ -21,7 +21,6 @@ import { ApplicationStatusComponent } from './components/application-status/appl
 import { QuicklinkCardComponent } from './common/quicklink-card/quicklink-card.component';
 import { NotificationCardComponent } from './components/notification-card/notification-card.component';
 import { RouterOutlet } from '@angular/router';
-
 
 @Component({
   selector: 'app-root',
@@ -72,3 +71,4 @@ export class AppComponent implements OnInit {
   //   });
   // }
 }
+
