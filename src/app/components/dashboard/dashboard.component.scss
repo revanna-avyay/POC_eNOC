@@ -1,0 +1,30 @@
+.dashboard-actions {
+
+
+    position: absolute;
+    top: 26px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .actions-icon img {
+        height: 23px;
+    }
+
+    .app-counts {
+        background-color: var(--color-metro-red);
+        color: #fff;
+        border: 1px solid #F5F5F5;
+        height: 22px;
+        width: 22px;
+        font-weight: 700;
+        border-radius: 20px;
+    }
+
+    .app-counts {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+}
