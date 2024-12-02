@@ -1,0 +1,77 @@
+<div class="calendar-container">
+  <!-- Header -->
+  <div class="calendar-header">
+    <h3>My Meetings</h3>
+    <button class="btn-close" aria-label="Close"></button>
+  </div>
+
+  <!-- View Toggle -->
+  <div class="view-toggle">
+    <button
+      class="btn view-btn"
+      [class.active]="viewMode === 'month'"
+      (click)="setViewMode('month')"
+    >
+      Month
+    </button>
+    <button
+      class="btn view-btn"
+      [class.active]="viewMode === 'week'"
+      (click)="setViewMode('week')"
+    >
+      Week
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <div class="calendar-navigation">
+    <button (click)="navigate(-1)" class="nav-arrow">&lt;</button>
+    <h4>{{ getCurrentPeriod() }}</h4>
+    <button (click)="navigate(1)" class="nav-arrow">&gt;</button>
+  </div>
+
+  <!-- Calendar Grid -->
+  <div class="calendar-grid">
+    <!-- Day Headers -->
+    <div class="day-header" *ngFor="let day of daysOfWeek">{{ day }}</div>
+
+    <!-- Month View -->
+    <ng-container *ngIf="viewMode === 'month'">
+      <div
+        *ngFor="let day of monthDays"
+        class="calendar-day"
+        [class.has-events]="day.events.length > 0"
+      >
+        <ng-container *ngIf="day.date; else placeholder">
+          <div class="day-number">{{ day.date.getDate() }}</div>
+        </ng-container>
+        <ng-template #placeholder>
+          <div class="day-placeholder"></div>
+        </ng-template>
+        <div class="events">
+          <div *ngFor="let event of day.events" class="event">
+            <p class="text-danger">{{ event.time }}</p>
+            <span>{{ event.title }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Week View -->
+    <ng-container *ngIf="viewMode === 'week'">
+      <div
+        *ngFor="let day of currentWeek"
+        class="calendar-day"
+        [class.has-events]="day.events.length > 0"
+      >
+        <div class="day-number">{{ day.date.getDate() }}</div>
+        <div class="events">
+          <div *ngFor="let event of day.events" class="event">
+            <p class="text-danger">{{ event.time }}</p>
+            <span>{{ event.title }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
