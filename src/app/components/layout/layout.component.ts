@@ -36,6 +36,7 @@ const data = [
     id: 3,
     title: "6",
     subtitle: "Fines",
+    icon:"assets/images/dashboard/im1.svg"
   },
   {
     id: 4,

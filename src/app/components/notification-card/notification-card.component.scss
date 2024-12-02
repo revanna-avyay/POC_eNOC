@@ -1,0 +1,74 @@
+.notify-card-container {
+    width: 80%;
+    height: auto;
+    gap: 20px;
+    opacity: 0px;
+}
+
+.notify-header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notify-card-title {
+    font-family: RTA Office;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.6px;
+    text-decoration-skip-ink: none;
+    color: #172B4D;
+    margin-left: 20px;
+}
+
+.notify-card-li-group {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 10px;
+    width: 95%;
+    height: 62px;
+    margin-bottom: 10px;
+    opacity: 0px;
+    background: #F1F1F1;
+}
+
+.list-li-item {
+    font-family: RTA Office;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #1A278B;
+
+}
+
+.list-li-item-date {
+    font-family: RTA Office;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #545454;
+
+}
+
+.list-li-item-one {
+    font-family: RTA Office;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #545454;
+
+}
