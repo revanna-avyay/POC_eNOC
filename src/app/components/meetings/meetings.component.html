@@ -1,0 +1,29 @@
+<mat-card class="meetings-card">
+  <div class="header">
+    <mat-icon>calendar_today</mat-icon>
+    <span>My Meetings</span>
+    <a href="#" class="view-all">View all</a>
+  </div>
+
+  <div class="week-view">
+    <div class="week-header">
+      <span *ngFor="let day of weekDays" class="day">{{ day }}</span>
+    </div>
+    <div class="week-dates">
+      <span *ngFor="let date of currentWeekDates" class="date" [class.selected]="isSelected(date)" (click)="selectDate(date)">
+        {{ date.getDate() }}
+      </span>
+    </div>
+  </div>
+
+  <div class="meetings-list">
+    <div *ngFor="let meeting of meetings" class="meeting" [class.today]="isToday(meeting.date)">
+      <div class="time">{{ meeting.time }}</div>
+      <div class="details">{{ meeting.details }}</div>
+      <button mat-button class="join-button">Join</button>
+    </div>
+  </div>
+  
+</mat-card>
+
+  

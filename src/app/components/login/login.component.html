@@ -1,0 +1,53 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="username" class="form-label">User name</label>
+            <input
+              type="email"
+              id="username"
+              class="form-control"
+              formControlName="username"
+              placeholder="Enter your email"
+            />
+            <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="text-danger">
+              <small *ngIf="loginForm.get('username')?.errors?.['required']">Email is required.</small>
+              <small *ngIf="loginForm.get('username')?.errors?.['email']">Enter a valid email.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              formControlName="password"
+              placeholder="Enter your password"
+            />
+            <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="text-danger">
+              <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</small>
+              <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <a href="#" class="text-decoration-underline">Forgot password?</a>
+          </div>
+          <div class="d-grid mb-3">
+            <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+          </div>
+          <div class="text-center mb-3">or</div>
+          <div class="d-grid">
+            <button type="button" class="btn btn-outline-primary">
+              <img src="assets/images/uaepass.png" alt="UAE Pass" class="me-2" />
+                Sign in with UAE PASS
+            </button>
+          </div>
+          <div class="text-center mt-3">
+            <small>Are you a new user? <a href="#" class="text-decoration-underline">Register</a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

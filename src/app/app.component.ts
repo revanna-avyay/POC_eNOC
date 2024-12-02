@@ -20,34 +20,9 @@ import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from './components/application-status/application-status.component';
 import { QuicklinkCardComponent } from './common/quicklink-card/quicklink-card.component';
 import { NotificationCardComponent } from './components/notification-card/notification-card.component';
+import { RouterOutlet } from '@angular/router';
 
-const data = [
-  {
-    id: 1,
-    title: "5",
-    subtitle: "Comments",
-  },
-  {
-    id: 2,
-    title: "4",
-    subtitle: "Due To Revalidation",
-  },
-  {
-    id: 3,
-    title: "6",
-    subtitle: "Fines",
-  },
-  {
-    id: 4,
-    title: "9",
-    subtitle: "Payments",
-  },
-  {
-    id: 5,
-    title: "6",
-    subtitle: "Fines",
-  }
-]
+
 @Component({
   selector: 'app-root',
   standalone: true,
