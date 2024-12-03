@@ -1,0 +1,29 @@
+<div>
+    <h6
+      style="border: 1px solid black; display: flex; align-items: center; justify-content: space-between;"
+    >
+      <img class="starIcon" src="assets/icons/yellowStar.svg" alt="star icon" />
+      My Quick Links
+      <img
+        (click)="moreLinksClickHandler()"
+        class="gearIcon"
+        src="assets/icons/DoubleGear.svg"
+        alt="gear icon"
+        style="cursor: pointer;"
+        aria-label="Customize quick links"
+      />
+    </h6>
+  </div>
+  
+  <div class="row">
+    <div *ngIf="selectedNOCDisplay && selectedNOCDisplay.length">
+      <div
+        class="col-12 cardDiv"
+        *ngFor="let item of selectedNOCDisplay"
+      >
+        <img [src]="item.icon" class="noc-icon" />
+        <span>{{ item.text }}</span>
+      </div>
+    </div>
+  </div>
+  

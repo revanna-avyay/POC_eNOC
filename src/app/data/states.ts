@@ -261,3 +261,15 @@ export const informationLinkData = [
 	// 	arrowIcon: "../../assets/images/arrow.svg"
 	// }
 ]
+
+export const selectedNOC = [
+	{ id:1, isDefaultNOC: true, text:'My Dashboard' , isSelected: true, icon: '../../../assets/icons/dashBoard.svg' },
+	{ id:2, isDefaultNOC: true, text:'New NOC', isSelected: true, icon: '../../../assets/icons/filePlus.svg' },
+	{ id:3, isDefaultNOC: false, text:'Informational Service', isSelected: false, icon: '../../../assets/icons/InformationService.svg'},
+	{ id:7, isDefaultNOC: false, text:'Concept Design NOC', isSelected: true},
+	{ id:4, isDefaultNOC: false, text:'Trail Trenches NOC', isSelected: true, icon: '../../../assets/icons/trialTrench.svg' },
+	{ id:5, isDefaultNOC: false, text:'Construction NOC', isSelected: false, icon: '../../../assets/icons/Buldozer.svg'  },
+	{ id:6, isDefaultNOC: false, text:'Final Clearance', isSelected: false, icon: '../../../assets/icons/fileChecked.svg'  },
+	{ id:8, isDefaultNOC: false, text:'Rail NOC', isSelected: true },
+	{ id:9, isDefaultNOC: false, text:'Trail Trenches NOC', isSelected: true }
+]

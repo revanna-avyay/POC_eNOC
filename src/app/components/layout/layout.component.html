@@ -105,6 +105,12 @@
             <app-meetings />
           </ng-template>
         </ng-container>
+        <ng-container ngbNavItem="myQuickLinks">
+          <button ngbNavLink>My Quick Links </button>
+          <ng-template ngbNavContent>
+            <app-myquicklinks />
+          </ng-template>
+        </ng-container>
       </div>
   
       <div [ngbNavOutlet]="nav" class="ms-4"></div>

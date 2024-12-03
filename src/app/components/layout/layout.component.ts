@@ -18,6 +18,7 @@ import { StatusIndicatorComponent } from '../status-indicator/status-indicator.c
 import { BookmarksComponent } from '../bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from '../application-status/application-status.component';
 import { MeetingsComponent } from '../meetings/meetings.component';
+import { MyquicklinksComponent } from '../myquicklinks/myquicklinks.component';
 
 const data = [
   {
@@ -51,7 +52,8 @@ const data = [
   selector: 'app-layout',
   standalone: true,
   imports: [FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
-    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule],
+    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule,
+    MyquicklinksComponent],
   providers: [TableService],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
@@ -59,7 +61,7 @@ const data = [
 export class LayoutComponent implements OnInit {
   title = 'enoc';
   file_formats = fileFormats;
-  active = "file-upload";
+  active = "myQuickLinks";
   cardData: any[] = []
   customTableData: [] = []
 

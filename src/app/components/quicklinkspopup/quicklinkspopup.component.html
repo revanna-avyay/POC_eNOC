@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <h6>
+      <img
+        *ngIf="popupHeaderData[0]?.icon"
+        [src]="popupHeaderData[0].icon"
+        [alt]="popupHeaderData[0]?.alt"
+      />
+      {{ popupHeaderData[0]?.headerText }}
+      <button
+        type="button"
+        class="btn-close btn-close-wrapper"
+        aria-label="Close"
+        (click)="close()"
+      >
+      X
+      </button>
+    </h6>
+  </div>
+  <p> {{ selectedCards() }} selected (maximum 6 quick links)</p>
+
+  <div class="row">
+    <div *ngIf="cardLoopData.length > 0; else noData">
+      <div
+        class="col-12 cardDiv"
+        *ngFor="let item of cardLoopData; trackBy: trackByIndex"
+      >
+        <div [ngClass]="{ 'divSelected': item.isSelected }" (click)="cardClickHandler(item.id)">
+          {{ item.text }}
+          <span *ngIf="item.isDefaultNOC" class="defaultBadge"> Default </span>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noData>
+      <p>No items available.</p>
+    </ng-template>
+  </div>
+</div>
