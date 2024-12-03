@@ -52,7 +52,7 @@
                 <div *ngIf="currentStep > 5" class="checkmark">✔</div>
             </div>
             <div class="step-content">
-                <p class="step-number">STEP 05</p>
+                <p class="step-number font_bold">STEP 05</p>
                 <p class="step-title">Technical Information</p>
             </div>
         </div>
@@ -73,15 +73,25 @@
 
     <!-- Content Section -->
     <div class="content-container">
-        <div class="content">
-            <h2>Page {{ currentStep }}</h2>
-            <p>This is content for Step {{ currentStep }}.</p>
+
+        <div class="right_content_page">
+            <div class="content">
+                <h1>{{ currentStep }}</h1>
+                <div class="step_name_count">
+                    <span class="step-number">Step {{ currentStep }} of {{ totalSteps }}</span>
+                    <h2>Questionnaire</h2>
+                </div>
+            </div>
+    
+            <div class="Stepper_page">
+                <div class="inner_content"></div>
+            </div>
         </div>
 
         <!-- Navigation Buttons -->
         <div class="navigation-buttons">
-            <button (click)="previousStep()" [disabled]="currentStep === 1">Previous</button>
-            <button (click)="nextStep()" [disabled]="currentStep === totalSteps">
+            <button (click)="previousStep()" [disabled]="currentStep === 1" class="secondary_btn">Previous</button>
+            <button (click)="nextStep()" [disabled]="currentStep === totalSteps" class="primary_btn">
                 {{ currentStep === totalSteps ? 'Submit' : 'Next' }}
             </button>
         </div>

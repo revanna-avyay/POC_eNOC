@@ -61,7 +61,10 @@
   --secondary-grounded: #a1a430;
   /* Grounded */
   --bg-F5F5F5: #F5F5F5;
-  /* Grounded */
+  /* Fadded Green */
+  --fadded-green: #d6f5e3;
+  /* Fadded blue */
+  --fadded-blue: #D7DBF2;
 
   /* By Classification */
 
@@ -93,6 +96,9 @@
   --color-marine-expo: #01b5b8;
   --color-marine-on-demand-blue: #2c4280;
   --color-marine-on-demand-darker-blue: #0074bc;
+
+  // buttons text
+  --light-gray: #53565A;
 }
 
 /* Typography mixin using CSS variables */
