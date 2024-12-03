@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+
+    .stepper-container {
+        width: 30%;
+        background-color: #f5f5f5;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ccc;
+
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            position: relative;
+
+            .step-icon {
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                background: #d7dbf2;
+                width: 28px;
+                height: 28px;
+                position: relative;
+
+                ::after {
+                    content: '';
+                    height: 38px;
+                    width: 1px;
+                    background-color: #ccc;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                }
+
+                span {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                }
+
+                .checkmark {
+                    width: 16px;
+                    height: 16px;
+                    background-color: #28a745; // Green for completed steps
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 12px;
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .step-content {
+                .step-number {
+                    font-size: 12px;
+                    color: #777;
+                    margin: 0;
+                }
+
+                .step-title {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 5px 0 0;
+                }
+            }
+
+            &.active .step-icon {
+                background: #D7DBF2; // Blue for current step
+
+                span {
+                    background: #171C8F;
+                }
+            }
+
+            &.completed .step-icon {
+                background: #d6f5e3;
+
+                // Green background for completed steps
+                span {
+                    background: #19AF58;
+                    // Hide the default inner dot
+                }
+
+                .checkmark {
+                    display: block;
+                }
+            }
+
+            &.active .step-title {
+                color: blue;
+            }
+        }
+    }
+
+    .content-container {
+        width: 70%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .content {
+            h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                padding: 10px 20px;
+                margin-left: 10px;
+                font-size: 14px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: white;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+
+                &:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
