@@ -1,0 +1,72 @@
+.custom-modal-body {
+    padding: 32px 0;
+    background-color: #fff;
+}
+
+.accordion-button {
+    padding: 14px 32px;
+
+
+    .noc-icon {
+        margin: 0 22px 0 16px;
+        min-width: 42px;
+    }
+
+    h5 {
+        color: #172B4D;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.accordion-item {
+    position: relative;
+    border: 0;
+
+}
+
+.accordion-button,
+.accordion-collapse {
+    box-shadow: none;
+    background-color: #F6F6F9;
+
+}
+
+.accordion-button.collapsed {
+    background-color: #fff;
+}
+
+.accordion-button {
+    justify-content: flex-start;
+}
+
+.accordion-button.collapsed::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #E6E6E6;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.accordion-button::before {
+    display: none;
+}
+
+.accordion-body {
+    padding-left: 134px;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        color: #747B87;
+        font-size: 16px;
+        line-height: 111%;
+        margin: 0 0 25px 0;
+    }
+}

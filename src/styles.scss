@@ -84,6 +84,8 @@
   --color-navlink-blue: #172B4D;
   --bg-E8E8F4: #E8E8F4;
   --color-E4E7EA: #E4E7EA;
+  --color-F5F4F4: #F5F4F4;
+  --color-DFE2E6: #DFE2E6;
 
   /* Metro Colors */
   --color-metro-red: #e91d2f;
@@ -162,4 +164,33 @@ button {
   border: 1px solid var(--color-primary-blue) !important;
   background-color: var(--color-primary-blue) !important;
   color: #fff !important;
+}
+
+
+.custom-modal-header {
+  background-color: var(--color-F5F4F4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  font-size: 18px;
+
+  .modal-icon {
+    margin: 0 10px 0 0;
+  }
+
+  h4 {
+    font-weight: 700;
+    color: #172B4D;
+    margin: 0;
+  }
+
+  .close-modal {
+    background-color: var(--color-DFE2E6);
+    padding: 6px;
+  }
+}
+
+.custom-modal-body {
+  padding: 20px 40px;
 }
