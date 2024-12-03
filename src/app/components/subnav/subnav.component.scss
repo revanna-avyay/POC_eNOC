@@ -1,0 +1,48 @@
+@import '../../common/css/mixins.scss';
+
+.sub-nav-wrapper {
+    background-color: var(--bg-F5F5F5);
+}
+
+.breadcrumb-styles {
+
+    padding: 10px 0;
+
+    span {
+        font-size: 12px;
+        line-height: 16px;
+        color: #1A1A1A;
+    }
+
+    .slash {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .active-location {
+        font-family: 'Dubai Bold';
+        color: var(--color-primary-blue);
+    }
+}
+
+.sub-nav {
+    @include flex-center;
+    justify-content: space-between;
+}
+
+.nav-shorcuts {
+
+    gap: 25px;
+
+    .search-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        @include flex-center;
+        border-radius: 32px;
+    }
+
+    .announcement-icon {
+        margin: -4px 0 0 0;
+    }
+}

@@ -1,0 +1,56 @@
+<div class=" mt-5">
+    <!-- Pills Navigation -->
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="pills-applications-tab" data-bs-toggle="pill" href="#pills-applications"
+                role="tab" aria-controls="pills-applications" aria-selected="true"><span class="count">8</span>My
+                Applications</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-revalidation-tab" data-bs-toggle="pill" href="#pills-revalidation" role="tab"
+                aria-controls="pills-revalidation" aria-selected="false"><span class="count">4</span>Revalidation
+                Due</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-deposit-refund-tab" data-bs-toggle="pill" href="#pills-deposit-refund"
+                role="tab" aria-controls="pills-deposit-refund" aria-selected="false"><span
+                    class="count">6</span>Deposit Refund Applications</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-pending-pays-tab" data-bs-toggle="pill" href="#pills-pending-pays" role="tab"
+                aria-controls="pills-pending-pays" aria-selected="false"><span class="count">1</span>Pending
+                Payments</a>
+        </li>
+    </ul>
+
+    <!-- Pills Content -->
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-applications" role="tabpanel"
+            aria-labelledby="pills-applications-tab">
+            <div class="table-header d-flex justify-content-between align-items-center">
+                <h3 class="tab-heading">My Applications</h3>
+                <div class="edit-table d-flex align-items-center">
+                    <span class="me-2">
+                        <img src="assets/icons/edit-table-icon.svg" alt="edit-table" />
+                    </span>
+                    <p>Edit Table</p>
+                </div>
+            </div>
+            <div>
+                <app-table />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-revalidation" role="tabpanel" aria-labelledby="pills-revalidation-tab">
+            <h3>Profile</h3>
+            <p>Content for Profile tab.</p>
+        </div>
+        <div class="tab-pane fade" id="pills-deposit-refund" role="tabpanel" aria-labelledby="pills-deposit-refund-tab">
+            <h3>Contact</h3>
+            <p>Content for Contact tab.</p>
+        </div>
+        <div class="tab-pane fade" id="pills-pending-pays" role="tabpanel" aria-labelledby="pills-pending-pays-tab">
+            <h3>Contact</h3>
+            <p>Content for Contact tab.</p>
+        </div>
+    </div>
+</div>

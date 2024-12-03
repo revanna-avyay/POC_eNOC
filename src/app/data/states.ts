@@ -261,3 +261,40 @@ export const informationLinkData = [
 	// 	arrowIcon: "../../assets/images/arrow.svg"
 	// }
 ]
+
+export const quickLinkCardData = [
+	{
+		id: 1,
+		subtitle: "My Dashboard",
+		icon: "assets/images/dashboard/img6.svg",
+		url: ""
+	},
+	{
+		id: 2,
+		subtitle: "New NOC",
+		icon: "assets/images/dashboard/img2.svg",
+		url: ""
+	},
+	{
+		id: 3,
+		subtitle: "Informational Service",
+		icon: "assets/images/dashboard/img3.svg",
+		url: ""
+	},
+	{
+		id: 4,
+		subtitle: "Trail Trenches NOC",
+		icon: "assets/images/dashboard/img4.svg",
+		url: ""
+	},
+	{
+		id: 5,
+		subtitle: "Contruction NOC",
+		icon: "assets/images/dashboard/img5.svg",
+	},
+	{
+		id: 6,
+		subtitle: "Final Clearance",
+		icon: "assets/images/dashboard/img6.svg",
+	}
+]

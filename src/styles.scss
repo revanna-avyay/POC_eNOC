@@ -1,42 +1,67 @@
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import './app/common/css/mixins.scss';
 
-/* FONT FAMILY */
+
+
 @font-face {
-    font-family: 'Dubai';
-    src: url('../public/assets/fonts/Dubai-Regular.ttf') format('ttf'),
-        url('../public/assets/fonts/Dubai-Regular.woff2') format('woff2'),
-        url('../public/assets/fonts/Dubai-Regular.woff') format('woff'),
-        url('../public/assets/fonts/Dubai-Regular.eot');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Dubai Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Regular'), url('../public/assets/fonts/dubai-webfont/Dubai-Regular.woff') format('woff');
 }
 
-// @font-face {
-//     font-family: 'RTA';
-//     src: url('../public/assets/fonts/Office.ttf') format('ttf'),
-//         url('../public/assets/fonts/Office.woff2') format('woff2'),
-//         url('../public/assets/fonts/Office.woff') format('woff'),
-//         url('../public/assets/fonts/Office.eot');
-//     font-weight: 700;
-//     font-style: normal;
-// }
+
+@font-face {
+  font-family: 'Dubai Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Light'), url('../public/assets/fonts/dubai-webfont/Dubai-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Dubai Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Medium'), url('../public/assets/fonts/dubai-webfont/Dubai-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Dubai Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dubai Bold'), url('../public/assets/fonts/dubai-webfont/Dubai-Bold.woff') format('woff');
+}
+
+
 
 :root {
   /* Primary Colors */
   --color-primary-red: #e71425;
-  --color-primary-blue: #1a278b;
+  --color-primary-blue: #171C8F;
 
   /* Secondary Colors */
-  --secondary-happy: #fdb62b; /* Happy */
-  --secondary-fascinated: #fd7022; /* Fascinated */
-  --secondary-inspired: #ce19ab; /* Inspired */
-  --secondary-imaginary: #7e38c4; /* Imagery */
-  --secondary-relaxed: #1162dd; /* Relaxed */
-  --secondary-unique: #1bafb7; /* Unique */
-  --secondary-optimistic: #19af58; /* Optimistic */
-  --secondary-grounded: #a1a430; /* Grounded */
+  --secondary-happy: #fdb62b;
+  /* Happy */
+  --secondary-fascinated: #fd7022;
+  /* Fascinated */
+  --secondary-inspired: #ce19ab;
+  /* Inspired */
+  --secondary-imaginary: #7e38c4;
+  /* Imagery */
+  --secondary-relaxed: #1162dd;
+  /* Relaxed */
+  --secondary-unique: #1bafb7;
+  /* Unique */
+  --secondary-optimistic: #19af58;
+  /* Optimistic */
+  --secondary-grounded: #a1a430;
+  /* Grounded */
+  --bg-F5F5F5: #F5F5F5;
+  /* Grounded */
 
   /* By Classification */
 
@@ -53,6 +78,10 @@
   --color-bus-expo: #784d2b;
   --color-bus-on-demand: #e91d2f;
 
+  --color-navlink-blue: #172B4D;
+  --bg-E8E8F4: #E8E8F4;
+  --color-E4E7EA: #E4E7EA;
+
   /* Metro Colors */
   --color-metro-red: #e91d2f;
   --color-metro-green: #0aae53;
@@ -67,16 +96,16 @@
 }
 
 /* Typography mixin using CSS variables */
-@mixin typography(
-    $font-size,
-    $line-height,
-    $font-weight: normal,
-    $font-family: "Dubai"
+@mixin typography($font-size,
+  $line-height,
+  $font-weight: normal,
+  $font-family: "Dubai Regular"
+
 ) {
-    font-size: $font-size;
-    line-height: $line-height;
-    font-weight: $font-weight;
-    font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  font-family: $font-family;
 }
 
 /* Headline styles */
@@ -94,12 +123,37 @@ h3 {
 
 body {
   @include typography(16px, 18px);
+  background-color: #FAFAFA !important;
 }
 
 p {
   @include typography(14px, 16px);
+  margin: 0
 }
 
 .small {
   @include typography(12px, 14px);
+}
+
+// buttons 
+button {
+  @include flex-center;
+  border-radius: 4px !important;
+  font-size: 14px;
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--color-primary-blue) !important;
+  color: var(--color-primary-blue) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primary-blue) !important;
+  color: #fff !important;
+}
+
+.btn-primary {
+  border: 1px solid var(--color-primary-blue) !important;
+  background-color: var(--color-primary-blue) !important;
+  color: #fff !important;
 }

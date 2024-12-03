@@ -1,0 +1,44 @@
+thead {
+    background-color: #FAFAFB;
+    box-shadow: 0 -1px 0 #EDF2F7;
+
+    tr,
+    th {
+        border: 0;
+    }
+}
+
+th {
+    color: #8492A6;
+    font-weight: 400;
+}
+
+td {
+    color: var(--color-navlink-blue);
+}
+
+th,
+td {
+    padding: 16px 10px;
+}
+
+.pagination-wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    .current-range {
+        color: var(--color-navlink-blue);
+    }
+
+    .total-range {
+        color: #919CAF;
+    }
+
+    .navigation-btns {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+}

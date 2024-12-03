@@ -18,6 +18,8 @@ import { StatusIndicatorComponent } from '../status-indicator/status-indicator.c
 import { BookmarksComponent } from '../bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from '../application-status/application-status.component';
 import { MeetingsComponent } from '../meetings/meetings.component';
+import { TableComponent } from '../table/table.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const data = [
   {
@@ -34,6 +36,7 @@ const data = [
     id: 3,
     title: "6",
     subtitle: "Fines",
+    icon:"assets/images/dashboard/im1.svg"
   },
   {
     id: 4,
@@ -50,7 +53,7 @@ const data = [
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
+  imports: [DashboardComponent, FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
     LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule],
   providers: [TableService],
   templateUrl: './layout.component.html',

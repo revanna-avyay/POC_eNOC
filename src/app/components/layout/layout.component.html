@@ -1,112 +1,116 @@
-<div class="container-fluid">
-    <div class="my-4 d-flex justify-content-end">
-      <app-notification></app-notification>
-    </div>
-    <div class="mt-1">
+<div class="container-fluid p-0">
+  <app-dashboard />
+  <div class="my-4 d-flex justify-content-end">
+    <app-notification></app-notification>
+  </div>
+  <!-- <div class="mt-1">
       <app-common-alert [title]="'Success'" [content]="'This is Sample Re-Usable Alert'"
         [alertType]="'alert-success'"></app-common-alert>
     </div>
     <div class="mt-1">
       <app-common-alert [title]="'Error'" [content]="'This is Sample Re-Usable Alert'"
         [alertType]="'alert-danger'"></app-common-alert>
-    </div>
-    <!-- <div class="mt-5">
+    </div> -->
+  <!-- <div class="mt-5">
       <button (click)="fetchData()">Fetch Data</button>
     </div> -->
-    <div class="d-flex">
-      <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
-        <ng-container ngbNavItem="file-upload">
-          <button ngbNavLink>File Upload</button>
-          <ng-template ngbNavContent>
-            <app-file-upload [allowedFileTypes]="file_formats" [allowMultiple]="true"
-              (filesChanged)="onFilesChanged($event)">
-            </app-file-upload>
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="Re-Usable">
-          <button ngbNavLink>Reusable Card</button>
-          <ng-template ngbNavContent>
-            <div class="row">
-              <div class="col-3 p-2 m-4" *ngFor="let item of cardData; let index = index">
-                <app-common-card [cardData]="item"></app-common-card>
-              </div>
+
+
+  <div class="d-flex">
+    <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
+      <ng-container ngbNavItem="file-upload">
+        <button ngbNavLink>File Upload</button>
+        <ng-template ngbNavContent>
+          <app-file-upload [allowedFileTypes]="file_formats" [allowMultiple]="true"
+            (filesChanged)="onFilesChanged($event)">
+          </app-file-upload>
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="Re-Usable">
+        <button ngbNavLink>Reusable Card</button>
+        <ng-template ngbNavContent>
+          <div class="row">
+            <div class="col-3 p-2 m-4" *ngFor="let item of cardData; let index = index">
+              <app-common-card [cardData]="item"></app-common-card>
             </div>
-  
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="Custom-Table">
-          <button ngbNavLink>Custom Table</button>
-          <ng-template ngbNavContent>
-            <div class="row">
-              <div class="col-3 p-2 m-4">
-                <app-common-table [custData]="customTableData"></app-common-table>
-              </div>
+          </div>
+
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="Custom-Table">
+        <button ngbNavLink>Custom Table</button>
+        <ng-template ngbNavContent>
+          <div class="row">
+            <div class="col-3 p-2 m-4">
+              <app-common-table [custData]="customTableData"></app-common-table>
             </div>
-  
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="accordion">
-          <button ngbNavLink>Accordion</button>
-          <ng-template ngbNavContent>
-            <app-expand-collapse />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="search">
-          <button ngbNavLink>Type Ahead</button>
-          <ng-template ngbNavContent>
-            <app-type-ahead />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="settings">
-          <button ngbNavLink>Search</button>
-          <ng-template ngbNavContent>
-            <app-search />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="langtranslate">
-          <button ngbNavLink>Language Translate</button>
-          <ng-template ngbNavContent>
-            <app-lang-translate />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="information-links">
-          <button ngbNavLink>Information Links</button>
-          <ng-template ngbNavContent>
-            <app-information-links />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="pdf-download">
-          <button ngbNavLink>PDF Download</button>
-          <ng-template ngbNavContent>
-            <app-pdf />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="statusIndicator">
-          <button ngbNavLink>Status Indicator</button>
-          <ng-template ngbNavContent>
-            <app-status-indicator />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="bookmark">
-          <button ngbNavLink>Bookmark</button>
-          <ng-template ngbNavContent>
-            <app-bookmarks />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="applicationStatus">
-          <button ngbNavLink> Application Status </button>
-          <ng-template ngbNavContent>
-            <app-application-status />
-          </ng-template>
-        </ng-container>
-        <ng-container ngbNavItem="meetings">
-          <button ngbNavLink> Meetings </button>
-          <ng-template ngbNavContent>
-            <app-meetings />
-          </ng-template>
-        </ng-container>
-      </div>
-  
-      <div [ngbNavOutlet]="nav" class="ms-4"></div>
+          </div>
+
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="accordion">
+        <button ngbNavLink>Accordion</button>
+        <ng-template ngbNavContent>
+          <app-expand-collapse />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="search">
+        <button ngbNavLink>Type Ahead</button>
+        <ng-template ngbNavContent>
+          <app-type-ahead />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="settings">
+        <button ngbNavLink>Search</button>
+        <ng-template ngbNavContent>
+          <app-search />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="langtranslate">
+        <button ngbNavLink>Language Translate</button>
+        <ng-template ngbNavContent>
+          <app-lang-translate />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="information-links">
+        <button ngbNavLink>Information Links</button>
+        <ng-template ngbNavContent>
+          <app-information-links />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="pdf-download">
+        <button ngbNavLink>PDF Download</button>
+        <ng-template ngbNavContent>
+          <app-pdf />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="statusIndicator">
+        <button ngbNavLink>Status Indicator</button>
+        <ng-template ngbNavContent>
+          <app-status-indicator />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="bookmark">
+        <button ngbNavLink>Bookmark</button>
+        <ng-template ngbNavContent>
+          <app-bookmarks />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="applicationStatus">
+        <button ngbNavLink> Application Status </button>
+        <ng-template ngbNavContent>
+          <app-application-status />
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem="meetings">
+        <button ngbNavLink> Meetings </button>
+        <ng-template ngbNavContent>
+          <app-meetings />
+        </ng-template>
+      </ng-container>
     </div>
+
+    <div [ngbNavOutlet]="nav" class="ms-4"></div>
+
   </div>
+</div>
