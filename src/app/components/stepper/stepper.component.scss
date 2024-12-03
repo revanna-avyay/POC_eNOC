@@ -192,14 +192,6 @@
 }
 
 .step:last-child .step-icon span::after {
-    content: none;
-    height: 38px;
-    width: 1px;
-    background-color: red;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     display: none;
 }
 
