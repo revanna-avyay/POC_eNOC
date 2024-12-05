@@ -1,0 +1,14 @@
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_3582_10206" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="8" y="1" width="29" height="43">
+<path d="M11.25 5.625C11.25 5.12772 11.4475 4.65081 11.7992 4.29917C12.1508 3.94754 12.6277 3.75 13.125 3.75H31.875C32.3723 3.75 32.8492 3.94754 33.2008 4.29917C33.5525 4.65081 33.75 5.12772 33.75 5.625V28.125C33.75 28.6223 33.5525 29.0992 33.2008 29.4508C32.8492 29.8025 32.3723 30 31.875 30H13.125C12.6277 30 12.1508 29.8025 11.7992 29.4508C11.4475 29.0992 11.25 28.6223 11.25 28.125V5.625Z" fill="white" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+<path d="M16.875 26.25C17.9105 26.25 18.75 25.4105 18.75 24.375C18.75 23.3395 17.9105 22.5 16.875 22.5C15.8395 22.5 15 23.3395 15 24.375C15 25.4105 15.8395 26.25 16.875 26.25Z" fill="black"/>
+<path d="M28.125 26.25C29.1605 26.25 30 25.4105 30 24.375C30 23.3395 29.1605 22.5 28.125 22.5C27.0895 22.5 26.25 23.3395 26.25 24.375C26.25 25.4105 27.0895 26.25 28.125 26.25Z" fill="black"/>
+<path d="M11.25 18.75H33.75" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.6875 35.625H25.3125M16.875 41.25H28.125" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.9375 30L10.3125 41.25M29.0625 30L34.6875 41.25" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M33.75 14.0625V23.4375M11.25 14.0625V23.4375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</mask>
+<g mask="url(#mask0_3582_10206)">
+<path d="M0 0H45V45H0V0Z" fill="#1A278B"/>
+</g>
+</svg>

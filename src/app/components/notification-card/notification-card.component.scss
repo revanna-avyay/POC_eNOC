@@ -1,8 +1,19 @@
 .notify-card-container {
-    width: 80%;
-    height: auto;
+    width: 140%;
+    height: 300px;
     gap: 20px;
     opacity: 0px;
+    // overflow-y: auto;
+}
+
+.notify-card-list-container {
+    overflow-y: auto;
+}
+
+.notify-card-list-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
 }
 
 .notify-header-card {

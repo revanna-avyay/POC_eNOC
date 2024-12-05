@@ -2,33 +2,19 @@
     <div class="card-header notify-header-card">
         <div>
             <img class="notify-img" src="assets/images/bell.svg" /> <span class="notify-card-title">Notifications
-                (5)</span>
+                ({{notifyData.length}})</span>
         </div>
         <div>
             <img src="assets/images/dashboard/cross.svg" />
         </div>
     </div>
-    <ul class="">
-        <li class="list-group-item notify-card-li-group">
+    <ul class="notify-card-list-container">
+        <li *ngFor="let item of notifyData; let index = index" class="list-group-item notify-card-li-group">
             <div>
-                <span class="list-li-item"> RTAENOC : Cancellation reminder - NOC - 0401004-2004</span>
-                <p  class="list-li-item-one"> From : enoc&#64;rta.ae </p>
+                <span class="list-li-item"> {{item.title}}</span>
+                <p class="list-li-item-one"> {{item.subtitle}} </p>
             </div>
-            <span  class="list-li-item-date">29/01/2023</span>
-        </li>
-        <li class="list-group-item notify-card-li-group">
-            <div>
-                <span class="list-li-item"> RTAENOC : Task completed - NOC - 244400282004 </span>
-                <p class="list-li-item-one"> From : enoc&#64;rta.ae </p>
-            </div>
-            <span class="list-li-item-date">29/01/2023</span>
-        </li>
-        <li class="list-group-item notify-card-li-group">
-            <div class="notify-card-li">
-                <span class="list-li-item"> RTAENOC : Cancellation reminder - NOC - 0401004-2004 </span>
-                <p  class="list-li-item-one"> From : enoc&#64;rta.ae </p>
-            </div>
-            <span class="list-li-item-date">29/01/2023</span>
+            <span class="list-li-item-date">{{item.date}}</span>
         </li>
     </ul>
 </div>

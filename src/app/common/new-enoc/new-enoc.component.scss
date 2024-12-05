@@ -1,0 +1,82 @@
+.new-noc-container {
+    width: 500px;
+    height: auto;
+    gap: 20px;
+    opacity: 0px;
+    // overflow-y: auto;
+}
+
+.new-noc-accordion-container {
+    width: 450px;
+    height: auto;
+    gap: 20px;
+    opacity: 0px;
+}
+
+.new-noc-accordion-header {
+    border: none;
+    height: auto;
+}
+
+.new-noc-header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-noc-li-group {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+
+}
+
+.new-noc-title {
+    font-family: RTA;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26.76px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #172B4D;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.noc-title-container {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    width: 100%;
+}
+
+.icon-noc {
+    width: 43px;
+    gap: 0px;
+    opacity: 0px;
+    // margin-top: -10px;
+}
+
+.noc-divider {
+    width: 430px;
+    height: 0px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #E6E6E6;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.new-noc-list {
+    list-style-type: none;
+    font-family: RTA;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #747B87;
+    margin-left: 30px;
+}

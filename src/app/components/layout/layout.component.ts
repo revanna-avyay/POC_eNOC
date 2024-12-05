@@ -3,7 +3,7 @@ import { FileUploadComponent } from '../file-upload/file-upload.component';
 import { ExpandCollapseComponent } from '../expand-collapse/expand-collapse.component';
 import { TypeAheadComponent } from '../type-ahead/type-ahead.component';
 import { SearchComponent } from '../search/search.component';
-import { fileFormats } from '../../data/states';
+import { fileFormats, nocData, notificationCardData } from '../../data/states';
 import { NotificationComponent } from '../notification/notification.component';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { LangTranslateComponent } from "../lang-translate/lang-translate.component";
@@ -18,6 +18,9 @@ import { StatusIndicatorComponent } from '../status-indicator/status-indicator.c
 import { BookmarksComponent } from '../bookmarks/bookmarks.component';
 import { ApplicationStatusComponent } from '../application-status/application-status.component';
 import { MeetingsComponent } from '../meetings/meetings.component';
+import { NotificationCardComponent } from '../notification-card/notification-card.component';
+import { FormsModule } from '@angular/forms';
+import { NewENocComponent } from '../../common/new-enoc/new-enoc.component';
 
 const data = [
   {
@@ -50,8 +53,8 @@ const data = [
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [FileUploadComponent, PdfComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
-    LangTranslateComponent, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent,CommonTableComponent,CommonCardComponent,CommonAlertComponent,CommonModule],
+  imports: [FileUploadComponent, NewENocComponent, PdfComponent, NotificationCardComponent, InformationLinksComponent, ExpandCollapseComponent, TypeAheadComponent, SearchComponent, NotificationComponent, NgbNavModule,
+    LangTranslateComponent, FormsModule, ApplicationStatusComponent, BookmarksComponent, StatusIndicatorComponent, MeetingsComponent, CommonTableComponent, CommonCardComponent, CommonAlertComponent, CommonModule],
   providers: [TableService],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
@@ -62,6 +65,8 @@ export class LayoutComponent implements OnInit {
   active = "file-upload";
   cardData: any[] = []
   customTableData: [] = []
+  notificationData: any[] = []
+  nocData: any[] = []
 
   custTableData = inject(TableService)
 
@@ -71,6 +76,8 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.cardData = data
+    this.notificationData = notificationCardData
+    this.nocData = nocData
     this.getCustomTableData()
   }
 

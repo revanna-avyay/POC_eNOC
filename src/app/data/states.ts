@@ -298,3 +298,97 @@ export const quickLinkCardData = [
 		icon: "assets/images/dashboard/img6.svg",
 	}
 ]
+
+export const notificationCardData = [
+	{
+		id: 1,
+		title: "RTAENOC : Cancellation reminder - NOC - 0401004-2004",
+		subtitle: "From : enoc@rta.ae",
+		date: "24-12-2023",
+	},
+	{
+		id: 2,
+		title: "RTAENOC : Cancellation reminder - NOC - 3401784-2024",
+		subtitle: "From : enoc@rta.ae",
+		date: "16-08-2022",
+	},
+	{
+		id: 3,
+		title: "RTAENOC : Cancellation reminder - NOC - 0401004-2020",
+		subtitle: "From : enoc@rta.ae",
+		date: "15-04-2024",
+	},
+	{
+		id: 4,
+		title: "RTAENOC : Cancellation reminder - NOC - 5401004-2023",
+		subtitle: "From : enoc@rta.ae",
+		date: "19-12-2023",
+	},
+	{
+		id: 5,
+		title: "RTAENOC : Cancellation reminder - NOC - 2401004-2004",
+		subtitle: "From : enoc@rta.ae",
+		date: "24-12-2023",
+	},
+	{
+		id: 6,
+		title: "RTAENOC : Cancellation reminder - NOC - 0401004-2004",
+		subtitle: "From : enoc@rta.ae",
+		date: "24-12-2023",
+	}
+]
+
+export const nocData = [
+	{
+		id: 1,
+		subtitle: "Informational Service",
+		icon: "assets/images/noc/InformationalService.svg",
+		isBookmark: false
+	},
+	{
+		id: 2,
+		subtitle: "Concept Design NOC",
+		icon: "assets/images/noc/Frame208.svg",
+		isBookmark: false
+	},
+	{
+		id: 3,
+		subtitle: [{
+			title: "Trail Trenches NOC",
+			options: [
+				{ option: "Concept design NOC" },
+				{ option: "Pre-final design NOC for development" },
+				{ option: "Projects/Community access" }
+			]
+		}
+
+		],
+		icon: "assets/images/noc/Group427.svg",
+		isBookmark: false
+	},
+	{
+		id: 4,
+		subtitle: "Rail NOC",
+		icon: "assets/images/noc/park-solid_railway.svg",
+		isBookmark: false
+	},
+	{
+		id: 5,
+		subtitle: "Contruction NOC",
+		icon: "assets/images/noc/Path646.svg",
+		isBookmark: false
+	},
+	{
+		id: 6,
+		subtitle: "Final Clearance",
+		icon: "assets/images/noc/icon-park-solid.svg",
+		isBookmark: false
+	},
+	{
+		id: 6,
+		subtitle: "Others",
+		icon: "assets/images/noc/dots.svg",
+		isBookmark: false
+	}
+]
+
